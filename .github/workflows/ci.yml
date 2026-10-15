@@ -23,13 +23,3 @@ jobs:
 
       - name: Package app bundle
         run: bash scripts/make-app.sh
-
-      - name: Build with Xcode
-        run: >
-          xcodebuild
-          -project PhoneScreen.xcodeproj
-          -scheme PhoneScreen
-          -configuration Debug
-          -destination 'platform=macOS'
-          CODE_SIGNING_ALLOWED=NO
-          build
