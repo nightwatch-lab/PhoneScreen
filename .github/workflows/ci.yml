@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  macos:
+    name: macOS ${{ matrix.runner }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-14, macos-15]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test portable logic
+        run: swift test
+
+      - name: Build Swift package
+        run: swift build -c release
+
+      - name: Package app bundle
+        run: bash scripts/make-app.sh
+
+      - name: Build with Xcode
+        run: >
+          xcodebuild
+          -project PhoneScreen.xcodeproj
+          -scheme PhoneScreen
+          -configuration Debug
+          -destination 'platform=macOS'
+          CODE_SIGNING_ALLOWED=NO
+          build

@@ -1,0 +1,10 @@
+.build/
+build/
+DerivedData/
+.swiftpm/
+.DS_Store
+xcuserdata/
+*.xcuserstate
+agent-tools/
+tmp/
+*.dmg
