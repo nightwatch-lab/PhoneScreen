@@ -6,6 +6,12 @@
 
 默认预设是 iPhone 17e 竖屏 1170×2532，横屏是 2532×1170，都是 460 ppi。Apple 在 [iPhone 17e 技术规格](https://www.apple.com/iphone-17e/specs/) 里写的是 “2532-by-1170-pixel resolution at 460 ppi”：长边在前。竖着拿手机时，宽是 1170，高是 2532。按这个矩形量，对角线约 6.06 英寸，和 Apple 对这块屏幕的说明一致。
 
+## 下载
+
+[下载 PhoneScreen.dmg](https://github.com/nightwatch-lab/PhoneScreen/releases/latest/download/PhoneScreen.dmg)（[所有版本](https://github.com/nightwatch-lab/PhoneScreen/releases)）
+
+打开 DMG，把 PhoneScreen 拖进「应用程序」。App 未签名，第一次请右键 → 打开。
+
 ## 配合 UU远程
 
 1. 在 Mac 上打开 PhoneScreen，点 iPhone 17e 竖屏（或先横竖切换再连接）。菜单栏图标旁出现绿点表示虚拟屏已经在。
